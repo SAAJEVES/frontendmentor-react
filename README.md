@@ -35,8 +35,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [www.saajevessolutionforthisproject.com](https://github.com/SAAJEVES/FrontendMentor-challenge-on-JS-J07)
-- Live Site URL: [www.saajeveslivesiteforthisproject.com](https://saajeves.github.io/FrontendMentor-challenge-on-JS-J07/)
+- Solution URL: [www.saajevessolutionforthisproject.com](https://github.com/SAAJEVES/frontendmentor-react)
+- Live Site URL: [www.saajeveslivesiteforthisproject.com](https://space-tourism-saajeves.netlify.app/)
 
 ## My process
 
