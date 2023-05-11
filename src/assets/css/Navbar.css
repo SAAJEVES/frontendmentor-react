@@ -1,0 +1,177 @@
+.navbar {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+
+/* Main Navbar */
+.main-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo.hide {
+  display: none;
+}
+
+.navlinks-container {
+  position: relative;
+  flex-basis: 60%;
+  backdrop-filter: blur(20px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: move-to-bottom 3000ms 1;
+}
+
+
+@keyframes move-to-bottom {
+  0% {
+    bottom: 100px;
+  }
+
+  100% {
+    bottom: 0;
+  }
+  
+}
+
+.navlinks-container::before {
+  content: "";
+  width: 50%;
+  height: 1px;
+  background-color: #ffffff6f;
+  position: absolute;
+  top: 50%;
+  left: -45%;
+}
+
+.navlinks {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navlinks a {
+  color: #fff;
+  display: inline-block;
+  padding: 17px;
+  font-size: 17px;
+  text-decoration: none;
+  transition: 500ms;
+  text-transform: uppercase;
+}
+
+.navlinks a.active {
+  border-bottom: 3px solid #fff;
+}
+
+.navlinks a .num,
+.sidebar-navlinks a .num {
+  font-weight: 700;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+
+/* Sidebar */
+.sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 100%;
+  width: 0%;
+  background-color: #000000d1;
+  transition: 500ms;
+  overflow: hidden;
+  z-index: 3;
+}
+
+.sidebar.open {
+  width: 50%;
+  display: none;
+}
+
+.sidebar .close {
+  width: max-content;
+  margin-top: 50px;
+  margin-right: 25px;
+  margin-left: auto;
+  margin-bottom: 40px;
+  cursor: pointer;
+}
+
+.sidebar-navlinks a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  padding: 20px;
+  font-size: 18px;
+  transition: 500ms;
+}
+
+.sidebar-navlinks a.active {
+  background-color: #4b8edb78;
+}
+
+
+/* Screen Sizes */
+@media screen and (max-width: 1050px) {
+  .navlinks-container::before {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .navlinks a {
+      font-size: 16px;
+    }
+
+  .navlinks-container::before {
+      width: 45%;
+    }
+}
+
+@media screen and (max-width: 850px) {
+  .navlinks a {
+    font-size: 15px;
+  }
+
+  .navlinks-container::before {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navlinks a {
+    font-size: 13px;
+  }
+
+  .navlinks-container{
+    width: 83%;
+  }
+  .navlinks-container::before {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .navlinks-container {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .sidebar.open {
+    display: block;
+  }
+}

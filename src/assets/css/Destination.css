@@ -1,0 +1,185 @@
+.destination {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  background: url(../destination/background-destination-desktop.jpg);
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.destination-container {
+  width: 80%;
+  margin-top: 130px;
+}
+
+.destination-container > h3 {
+  font-size: 30px;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+
+.destination-container > h3 span {
+  margin-right: 20px;
+  color: #ffffff8c;
+}
+
+/* Destination Component */
+.destination-component-flex {
+  color: #ffff;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.destination-component-left {
+  flex-basis: 45%;
+  position: relative;
+  animation: move-down 3000ms;
+  animation-iteration-count: 1;
+}
+
+.destination-component-left img {
+  width: 75%;
+  display: block;
+  margin-left: auto;
+}
+
+.destination-component-right {
+  position: relative;
+  flex-basis: 45%;
+  overflow: hidden;
+}
+
+.destination-component-right-link {
+  margin-bottom: 20px;
+}
+
+.destination-component-right-link  button {
+  display: inline-block;
+  font-size: 15px;
+  color: #fff;
+  margin-right: 20px;
+  background-color: transparent;
+  padding: 10px 0px;
+  border: 0;
+  cursor: pointer;
+}
+
+.destination-component-right-link button.border-bottom {
+  border-bottom: 1px solid #fff;
+}
+
+.destination-component-right-info {
+  width: 100%;
+  position: relative;
+  animation-name: move-top;
+  animation-duration: 3000ms;
+  animation-iteration-count: 1;
+}
+
+.destination-component-right-info .heading {
+  font-size: 60px;
+  margin-bottom: 30px;
+}
+
+.destination-component-right-info .text {
+  line-height: 1.6em;
+  width: 75%;
+  margin-bottom: 15px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.468);
+}
+
+.destination-component-right-info .info {
+  display: flex;
+  gap: 70px;
+}
+
+.destination-component-right-info .info p {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 100;
+}
+
+.destination-component-right-info .info h2 {
+  font-size: 30px;
+  font-weight: 100;
+}
+
+
+/* Animation */
+@keyframes move-down {
+  0% {
+    bottom: 250px;
+  }
+
+  100% {
+    bottom: 0;
+  }
+}
+
+@keyframes move-top {
+  0% {
+    top: 250px;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .destination {
+    background: url(../destination/background-destination-tablet.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .destination-container {
+    margin-top: 120px;
+  }
+
+  .destination-component-flex {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .destination-component-left img {
+    width: 50%;
+    margin: auto;
+  }
+
+  .destination-component-right {
+    text-align: center;
+  }
+
+  .destination-component-right-info .text {
+    margin: 30px auto;
+  }
+
+  .destination-component-right-info .info {
+    width: 75%;
+    margin: 0 auto 20px;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .destination {
+    background: url(../destination/background-destination-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .destination-component-right-info .info {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

@@ -1,0 +1,152 @@
+.home {
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  background: url(../home/background-home-desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.home-container {
+  width: 80%;
+  margin-top: 100px;
+}
+
+.home-flex {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.home-flex-left {
+  flex-basis: 50%;
+  position: relative;
+  animation: move-to-right 3000ms;
+  animation-iteration-count: 1;
+}
+
+@keyframes move-to-right {
+  0% {
+    right: 120px;
+  }
+
+  100% {
+    right: 0px;
+  }
+}
+
+.home-flex-left-heading {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.home-flex-left-heading h5 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.home-flex-left-heading h2 {
+  font-size: 90px;
+}
+
+.home-flex-left-text p {
+  font-size: 23px;
+  line-height: 1.5em;
+  word-spacing: 4px;
+  text-align: justify;
+}
+
+.home-flex-right {
+  flex-basis: 50%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  animation: move-to-left 3000ms;
+  animation-iteration-count: 1;
+}
+
+@keyframes move-to-left {
+  from {
+    left: 120px;
+  }
+
+  to {
+    left: 0px;
+  }
+}
+
+.home-flex-right-heading {
+  background-color: #fff;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-flex-right-heading h2 {
+  background-color: #fff;
+  color: #000;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 900px) {
+  .home-flex-left-heading h5 {
+    font-size: 17px;
+  }
+
+  .home-flex-left-heading h2 {
+    font-size: 70px;
+  }
+
+  .home-flex-left-text p {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .home {
+    background: url(../home/background-home-tablet.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .home-flex {
+    flex-direction: column;
+    gap: 150px;
+  }
+
+  .home-flex-left {
+    text-align: center;
+  }
+
+  .home-flex-left-heading h5 {
+    font-size: 15px;
+  }
+
+  .home-flex-left-heading h2 {
+    font-size: 50px;
+  }
+
+  .home-flex-left-text p {
+    font-size: 17px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .home {
+    background: url(../home/background-home-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}

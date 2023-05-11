@@ -1,0 +1,202 @@
+.crew {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  background: url(../crew/background-crew-desktop.jpg);
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  color: green;
+}
+
+.crew-container {
+  color: #fff;
+  position: relative;
+  width: 80%;
+  margin: 130px auto 0;
+}
+
+.crew-container > h3 {
+  font-size: 30px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.crew-container>h3 span {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+/* Crew Component */
+.crewcomponent {
+  width: 100%;
+}
+
+.crewcomponent-flex {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  overflow: hidden;
+}
+
+.crewcomponent-flex-left {
+  position: relative;
+  flex-basis: 45%;
+  padding-top: 90px;
+}
+
+.crewcomponent-flex-left h4 {
+  color: #ffffff86;
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-weight: 100;
+  margin-bottom: 10px;
+  animation-name: zoom;
+  animation-duration: 500ms;
+  animation-iteration-count: 1;
+}
+
+.crewcomponent-flex-left h2 {
+  color: #ffffffea;
+  font-size: 45px;
+  font-weight: 100;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  animation-name: zoom;
+  animation-duration: 500ms;
+  animation-iteration-count: 1;
+}
+
+.crewcomponent-flex-left p {
+  font-size: 18px;
+  line-height: 1.5em;
+  width: 83%;
+  word-spacing: 2px;
+  margin-bottom: 100px;
+  animation-name: zoom;
+  animation-duration: 500ms;
+  animation-iteration-count: 1;
+}
+
+.crewcomponent-links {
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 420px;
+}
+
+.crewcomponent-links .link {
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  background-color: #ffffff75;
+  cursor: pointer;
+}
+
+.crewcomponent-links .link.link-active {
+  background-color: #fff;
+}
+
+.crewcomponent-flex-right {
+  flex-basis: 45%;
+}
+
+.crewcomponent-flex-right img {
+  object-fit: cover;
+  width: 100%;
+  animation-name: zoom;
+  animation-duration: 700ms;
+  animation-iteration-count: 1;
+}
+
+/* Animation */
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .crewcomponent-flex {
+    padding-bottom: 100px;
+  }
+  .crewcomponent-flex-left h4 {
+    font-size: 25px;
+  }
+
+  .crewcomponent-flex-left h2 {
+    font-size: 35px;
+  }
+
+  .crewcomponent-flex-left p {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .crewcomponent-links {
+    position: absolute;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .crew {
+    background: url(../crew/background-crew-tablet.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .crewcomponent-flex {
+    flex-direction: column-reverse;
+  }
+
+  .crewcomponent-flex-left {
+    padding-top: 40px;
+    text-align: center;
+  }
+
+  .crewcomponent-flex-left h4 {
+    font-size: 20px;
+  }
+
+  .crewcomponent-flex-left h2 {
+    font-size: 30px;
+  }
+
+  .crewcomponent-flex-left p {
+    font-size: 15px;
+  }
+
+  .crewcomponent-links {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .crewcomponent-flex-right img {
+    width: 70%;
+    max-height: 500px;
+    display: block;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .crew {
+    background: url(../crew/background-crew-mobile.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}

@@ -1,0 +1,209 @@
+.technology {
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  background: url(../technology/background-technology-desktop.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.technology-container {
+  width: 90%;
+  margin: 130px 0  0 auto;
+}
+
+.technology-container h2 {
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.technology-container h2 span {
+  display: inline-block;
+    margin-right: 20px;
+}
+
+/* Technology Component */
+.technologycomponent {
+  width: 100%;
+}
+
+.technologycomponent-flex {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.technologycomponent-flex-left {
+  flex-basis: 45%;
+  align-self: center;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.technologycomponent-flex-left-links {
+  flex-basis: 25%;
+}
+
+.technologycomponent-flex-left-links .link {
+  font-size: 30px;
+  cursor: pointer;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  margin: 0 auto 20px;
+  position: relative;
+  transform: scale(.7);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 300ms;
+}
+
+.technologycomponent-flex-left-links .link.background {
+  background-color: #fff;
+  color: #000;
+  transform: scale(1);
+}
+
+.technologycomponent-flex-left-info {
+  flex-basis: 70%;
+  position: relative;
+  animation-name: from-right;
+  animation-duration: 2000ms;
+  animation-iteration-count: 1;
+}
+
+.technologycomponent-flex-left-info h5 {
+  color: #ffffff9c;
+  letter-spacing: 4px;
+  font-weight: 200;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.technologycomponent-flex-left-info h2 {
+  font-size: 44px;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.technologycomponent-flex-left-info p {
+  color: #ffffff9c;
+  font-size: 17px;
+  line-height: 1.6em;
+}
+
+.technologycomponent-flex-right {
+  flex-basis: 45%;
+}
+
+.technologycomponent-flex-right img {
+  display: block;
+  object-fit: contain;
+  width: 85%;
+  margin-left: auto;
+  animation-name: circle;
+  animation-duration: 2000ms;
+  animation-iteration-count: 1;
+}
+
+@keyframes circle {
+  0% {
+    border-radius: 0%;
+    transform: scale(1);
+  }
+  50% {
+    border-radius: 50%;
+    transform: scale(.2);
+  }
+  100% {
+    border-radius: 0%;
+    transform: scale(1);
+  }
+}
+
+@keyframes from-right {
+  0% {
+    left: 250px;
+  }
+
+  100% {
+    left: 0px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .technologycomponent-flex-right {
+    flex-basis: 50%;
+  }
+
+  .technologycomponent-flex-right img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .technologycomponent-flex-left-info h2 {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .technology {
+    background: url(../technology/background-technology-tablet.jpg);
+    background-repeat: no-repeat;
+  }
+
+  .technology-container {
+    width: 80%;
+    margin-right: auto;
+    padding-bottom: 20px;
+  }
+
+  .technologycomponent-flex {
+    flex-direction: column-reverse;
+  }
+
+  .technologycomponent-flex-left {
+    flex-direction: column;
+  }
+
+  .technologycomponent-flex-left-links {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .technologycomponent-flex-left-info {
+    text-align: center;
+  }
+}
+
+
+@media screen and (max-width: 475px) {
+  .technology {
+    background: url(../technology/background-technology-mobile.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+    .technologycomponent-flex-left-links {
+      justify-content: center;
+    }
+
+  .technologycomponent-flex-left-links .link {
+    width: 50px;
+    height: 50px;
+  }
+}
