@@ -2,6 +2,9 @@ import React from 'react';
 import CrewComponent from '../component/CrewComponent';
 import { useLoaderData } from 'react-router-dom';
 
+// Data from JSON
+import data from "../data.json"
+
 // Css
 import "../css/Crew.css";
 
@@ -11,7 +14,8 @@ import { useContentProvider } from '../utilsprovider/ContentProvider';
 const Crew = () => {
   const {crew, closeSideBar} = useContentProvider();
 
-  const crewMembers = useLoaderData();
+  // const crewMembers = useLoaderData();
+  const crewMembers = data.crew;
 
   return (
     <div className='crew' onClick={closeSideBar} >

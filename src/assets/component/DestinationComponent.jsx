@@ -5,7 +5,7 @@ import { useContentProvider } from '../utilsprovider/ContentProvider';
 
 const DestinationComponent = ({dataProp}) => {
   const {filterData, handleClickDestination} = useContentProvider();
-  const {data, datum} = dataProp;
+  const {destinations, datum} = dataProp;
   const {png} = datum.images;
 
 
@@ -18,7 +18,7 @@ const DestinationComponent = ({dataProp}) => {
       <div className="destination-component-right">
         <div className="destination-component-right-link">
           {
-            data.map(item => (<button 
+            destinations.map(item => (<button 
             key={item.name} 
             className={item.name === filterData ? `border-bottom` : ``}
             onClick={() =>handleClickDestination(item.name)} >

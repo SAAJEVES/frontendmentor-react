@@ -2,6 +2,9 @@ import React, { useEffect} from 'react';
 import { useLoaderData } from 'react-router-dom';
 import TechnologyComponent from '../component/TechnologyComponent';
 
+// Data from JSON
+import data from "../data.json"
+
 // Css
 import "../css/Technology.css";
 
@@ -9,8 +12,9 @@ import "../css/Technology.css";
 import { useContentProvider } from '../utilsprovider/ContentProvider';
 
 const Technology = () => {
-  const techdata = useLoaderData();
   const {closeSideBar, setWidth, spaceV} = useContentProvider();
+  // const techdata = useLoaderData();
+  const techdata = data.technology;
 
 
   useEffect(() =>{
