@@ -36,9 +36,9 @@ const Destination = () => {
 }
 
 
-export const destinationData = async() => {
+/* export const destinationData = async() => {
   const destination = await fetch('http://localhost:3000/destinations');
   return destination.json();
-}
+} */
 
 export default React.memo(Destination);

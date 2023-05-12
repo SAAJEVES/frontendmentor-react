@@ -20,9 +20,9 @@ import Technology from './assets/pages/Technology';
 import Crew from './assets/pages/Crew';
 
 // Data Loader
-import { destinationData } from './assets/pages/Destination';
+/* import { destinationData } from './assets/pages/Destination';
 import { crewData } from './assets/pages/Crew';
-import { technologyData } from './assets/pages/Technology';
+import { technologyData } from './assets/pages/Technology'; */
 
 
 const router = createBrowserRouter(
@@ -30,9 +30,9 @@ const router = createBrowserRouter(
     <Route path='/' element={<RootLayout />}>
       <Route index element={<Home/>} />
       <Route path='home' element={<Home/>} />
-      <Route path='destination' element={<Destination/>} loader={destinationData} />
-      <Route path='crew' element={<Crew/>} loader={crewData} />
-      <Route path='technology' element={<Technology/>} loader={technologyData} />
+      <Route path='destination' element={<Destination/>} />
+      <Route path='crew' element={<Crew/>}  />
+      <Route path='technology' element={<Technology/>}  />
     </Route>
   )
 );

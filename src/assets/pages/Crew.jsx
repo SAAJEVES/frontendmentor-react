@@ -38,9 +38,9 @@ const Crew = () => {
 }
 
 
-export const crewData = async() => {
+/* export const crewData = async() => {
   const crew = await fetch("http://localhost:3000/crew");
   return crew.json()
-}
+} */
 
 export default React.memo(Crew);

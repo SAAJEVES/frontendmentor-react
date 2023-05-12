@@ -45,10 +45,10 @@ const Technology = () => {
   )
 }
 
-export const technologyData = async () => {
+/* export const technologyData = async () => {
   const data = await fetch(`http://localhost:3000/technology`);
 
   return data.json();
 }
-
+ */
 export default React.memo(Technology)
